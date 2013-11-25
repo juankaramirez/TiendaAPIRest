@@ -1,0 +1,25 @@
+{
+    "name": "castellanos-ramirez/apitienda",
+    "description": "TiendaWeb",
+    "authors": [
+        {
+            "name": "Leonardo Castellanos",
+            "email": "castellanosleonardo7@gmail.com"
+        },
+        {
+            "name": "Juan Camilo Ramirez",
+            "email": "juan.ramirezpadilla@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "": "app/"
+        }
+    },
+    "require": {
+        "silex/silex": "1.*",
+        "doctrine/orm": "2.3.4",
+        "twig/twig": ">=1.8,<2.0-dev",
+        "stormpath/sdk": "1.0.*@beta"
+    }
+}
