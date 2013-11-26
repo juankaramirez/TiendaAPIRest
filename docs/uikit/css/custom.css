@@ -1,0 +1,95 @@
+@font-face{font-family: Roboto-bold; src: url(../../fonts/AP_Roboto_43/Roboto-Bold.ttf) format('truetype')}
+@font-face{font-family: RobotoCondensed-bold; src: url(../../fonts/AP_Roboto_43/RobotoCondensed-Bold.ttf) format('truetype')}
+@font-face{font-family: Roboto-light; src: url(../../fonts/AP_Roboto_43/Roboto-Light.ttf) format('truetype')}
+@font-face{font-family: Roboto-regular; src: url(../..//fonts/AP_Roboto_43/Roboto-Regular.ttf) format('truetype')}
+@font-face{font-family: RobotoCondensed-regular; src: url(../../fonts/AP_Roboto_43/RobotoCondensed-Regular.ttf) format('truetype')}
+@font-face{font-family: Roboto-thin; src: url(../../fonts/AP_Roboto_43/Roboto-Thin.ttf) format('truetype')}
+
+body a{
+    font-family: roboto-light; font-size: 20px;
+}
+.uk-navbar .uk-active a, .uk-nav-header{
+    font-family: RobotoCondensed-bold; font-size: 20px;
+}
+
+.uk-nav-header{
+    font-family: RobotoCondensed-bold; font-size: 25px;
+}
+
+.uk-navbar-flip li a{
+    font-family: RobotoCondensed-regular; font-size: 20px;
+}
+.uk-nav-side li a, h1{
+    color: #0077dd;
+}
+.uk-panel h3, span #cat_title{
+    font-family:Roboto-bold; font-size: 25px;
+}
+
+#back_to_camera {
+    clear: both;
+    display: block;
+    height: 80px;
+    line-height: 40px;
+    padding: 20px;
+}
+.fluid_container {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 90%;
+}
+#loginform h1, #registroform h1, h1 {
+    font-family:Roboto-bold; font-size: 30px;
+}
+
+
+#loginform label{
+    font-family:Roboto-light; font-size: 22px;
+}
+
+.uk-form button{
+    font-family:Roboto-regular; font-size:15px;
+}
+
+.uk-thumbnail{
+    font-family: RobotoCondensed-bold; font-size:17px;
+}
+
+#thproducto{
+    font-family: Roboto-regular; font-size:15px;
+}
+
+#loginform a, #loginform input, #registroform a, #registroform input, body input{
+    font-family:Roboto-regular; font-size:17px;
+}
+
+#registroform h1{
+    font-size: 35px;
+}
+
+#registroform label{
+    font-family:Roboto-regular; font-size: 17px;
+}
+
+#registroform .form-title h2{
+    font-family:RobotoCondensed-bold; font-size: 20px;
+}
+
+#modal{
+    margin-top:50px;
+}
+
+#logout h1{font-family:RobotoCondensed-bold; font-size: 50px;}
+#logout h3{font-family:Roboto-light; font-size: 50px;}
+
+#principalc{
+    height:154px;width:793px;
+}
+
+#principalc h2{
+    color: rgb(153, 153, 153);
+}
+
+#catbusq{
+     font-size: 30px;
+}

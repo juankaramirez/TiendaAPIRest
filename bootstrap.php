@@ -16,6 +16,9 @@ $config = Setup::createAnnotationMetadataConfiguration(array(realpath(__DIR__.'/
     'path' => __DIR__ . '/db.sqlite',
 );*/
 
+/**
+ * Conexión con la base de datos
+ */
 $services_json = json_decode(getenv("VCAP_SERVICES"),true);
 $mysql_config = $services_json["mysql-5.1"][0]["credentials"];
 

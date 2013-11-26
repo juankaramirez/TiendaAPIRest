@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>API DOC</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="uikit/css/uikit.gradient.min.css" />
+    </head>
+    <body>
+        <div class="uk-grid">
+            <div class="uk-width-8-10 uk-push-1-10">
+                <div class="uk-margin-top uk-margin-bottom uk-panel uk-panel-box">
+                    <div class='uk-panel uk-panel-space'>
+                        <article class="uk-article">
+                            <h1 class="uk-article-title">Categor&iacute;as</h1>
+                            <p class="uk-article-meta">Lista de categor&iacute;as, creaci&oacute;n, edici&oacute;n y eliminaci&oacute;n.</p>
+                            <p class="uk-article-lead"></p>
+                            <table class="uk-table uk-table-hover uk-table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Recurso</th><th>Descripci&oacute;n</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="uk-width-5-10"><a href='categorias/api-categorias.html'>GET api/categorias</a></td>
+                                        <td class='uk-width-5-10 uk-text-justify'>
+                                            <p>Devuelve las categor&iacute;as actuales.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uk-width-5-10"><a href='categorias/api-categorias_id.html'>GET api/categorias/id</a></td>
+                                        <td class='uk-width-5-10 uk-text-justify'>
+                                            <p>Devuelve el nombre de la categor&iacute;a, su id y sus productos, adem&aacute;s de las categor&iacute;as actuales.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uk-width-5-10"><a href='categorias/api-categorias-nuevoregistro.html'>POST api/categorias/nuevoregistro</a></td>
+                                        <td class='uk-width-5-10 uk-text-justify'>
+                                            <p>Permite registrar una nueva categor&iacute;a.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uk-width-5-10"><a href='categorias/api-categorias-edicion.html'>PUT api/categorias/edicion</a></td>
+                                        <td class='uk-width-5-10 uk-text-justify'>
+                                            <p>Permite editar una categor&iacute;a existente.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uk-width-5-10"><a href='categorias/api-categorias-eliminar.html'>DELETE api/categorias/eliminar</a></td>
+                                        <td class='uk-width-5-10 uk-text-justify'>
+                                            <p>Permite eliminar una categor&iacute;a existente.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+
+                    <div class='uk-panel uk-panel-space'>
+                        <article class="uk-article">
+                            <h1 class="uk-article-title">Productos</h1>
+                            <p class="uk-article-meta">Lista de productos, creaci&oacute;n, edici&oacute;n y eliminaci&oacute;n.</p>
+                            <p class="uk-article-lead"></p>
+                            <table class="uk-table uk-table-condensed uk-table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Recurso</th><th>Descripci&oacute;n</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="uk-width-5-10"><a href='productos/api-productos.html'>GET api/productos</a></td>
+                                        <td class='uk-width-5-10 uk-text-justify'>
+                                            <p>Devuelve las categor&iacute;as y productos actuales.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uk-width-5-10"><a href='productos/api-productos-nuevoregistro.html'>POST api/productos/nuevoregistro</a></td>
+                                        <td class='uk-width-5-10 uk-text-justify'>
+                                            <p>Permite registrar un nuevo producto.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uk-width-5-10"><a href='productos/api-productos-edicion.html'>PUT api/productos/edicion</a></td>
+                                        <td class='uk-width-5-10 uk-text-justify'>
+                                            <p>Permite editar un nuevo producto.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uk-width-5-10"><a href='productos/api-productos-eliminar.html'>DELETE api/productos/eliminar</a></td>
+                                        <td class='uk-width-5-10 uk-text-justify'>
+                                            <p>Permite eliminar un nuevo producto.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

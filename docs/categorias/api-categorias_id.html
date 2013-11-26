@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>GET api/categorias_id - API DOC</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="../uikit/css/uikit.gradient.min.css" />
+    </head>
+    <body>
+        <div class="uk-grid">
+            <div class="uk-width-8-10 uk-push-1-10">
+                <div class="uk-margin-top uk-margin-bottom uk-panel">
+                    <article class="uk-article">
+                        <h1 class="uk-article-title">GET api/categorias_id</h1>
+                        <p class="uk-article-meta">Devuelve el nombre de la categor&iacute;a, su id y sus productos, adem&aacute;s de las categor&iacute;as actuales.</p>
+                        <p class="uk-article-lead"></p>
+                        <table class="uk-table">
+                            <tbody style='border-left: 1px solid #aaa; border-right: 1px solid #aaa;'>
+
+                                <tr style="border-bottom: 1px solid #ddd;">
+                                    <td valign="top" style="font-weight: bold; font-size: 1.4em; width: 20%; border-right: 1px solid #aaa; border-top: 1px solid #aaa;">
+                                        URL del recurso
+                                    </td>
+                                    <td style="padding-left: 10px; border-top: 1px solid #aaa;">
+                                        <a href='http://tiendaapirest.aws.af.cm/api/categorias/id' >http://tiendaapirest.aws.af.cm/api/categorias/id</a>
+                                    </td>
+                                </tr>
+
+                                <tr style="border-bottom: 1px solid #ddd;">
+                                    <td valign="top" style="font-weight: bold; font-size: 1.4em; width: 20%; border-right: 1px solid #aaa; border-top: 1px solid #aaa;">
+                                        Par&aacute;metros
+                                    </td>
+                                    <td style="padding-left: 10px; border-top: 1px solid #aaa;">
+                                        <p>
+                                            <b>Requeridos:</b> <br>
+                                            <code>id=[integer]</code> <br>
+                                            <span class='uk-text-info'>Ejemplo: id = 2</span>
+                                        </p>
+                                    </td>
+                                </tr>
+
+
+                                <tr style="border-bottom: 1px solid #ddd;">
+                                    <td valign="top" style="font-weight: bold; font-size: 1.4em; width: 20%; border-right: 1px solid #aaa; border-top: 1px solid #aaa;">
+                                        Ejemplo de solicitud
+                                    </td>
+                                    <td style="padding-left: 10px; border-top: 1px solid #aaa;"><pre class='uk-scrollable-text'>
+{
+    categ: "Computación",
+    categs: [
+        {
+            id: 1,
+            nombre: "Automóviles"
+        },
+        {
+            id: 2,
+            nombre: "Computación"
+        },
+        {
+            id: 3,
+            nombre: "Electrónica"
+        },
+        {
+            id: 4,
+            nombre: "Hogar"
+        },
+        {
+            id: 5,
+            nombre: "Instrumentos Musicales"
+        },
+        {
+            id: 6,
+            nombre: "Videojuegos-Consolas"
+        }
+    ],
+    prods: [
+        {
+            id: 3,
+            catId: 2,
+            nombre: "HP All in One",
+            descr: "Impresora",
+            codigo: 1003,
+            precio: "230000",
+            existencia: 600,
+            url: "impresora-hp-color-laserjet-2840-all-in-one-ganga.jpg"
+        }
+    ],
+    id: "2"
+}                                 </pre>
+                                        <p></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
