@@ -134,7 +134,7 @@ and open the template in the editor.
 					<div class='uk-panel uk-panel-space'>
                         <article class="uk-article">
                             <h1 class="uk-article-title">Canasta</h1>
-                            <p class="uk-article-meta">Registro y login de usuarios.</p>
+                            <p class="uk-article-meta">Recuperaci&oacute;n y manejo de canasta.</p>
                             <p class="uk-article-lead"></p>
                             <table class="uk-table uk-table-condensed uk-table-hover">
                                 <thead>
@@ -144,15 +144,27 @@ and open the template in the editor.
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="uk-width-5-10"><a href='usuarios/api-signup.html'>POST api/signup</a></td>
+                                        <td class="uk-width-5-10"><a href='canasta/api-canasta.html'>GET api/canasta</a></td>
                                         <td class='uk-width-5-10 uk-text-justify'>
-                                            <p>Permite registrar un nuevo usuario.</p>
+                                            <p>Devuelve los productos agregados a la canasta por un usario.</p>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="uk-width-5-10"><a href='usuarios/api-login.html'>POST api/login</a></td>
+                                        <td class="uk-width-5-10"><a href='canasta/api-canasta-add.html'>POST api/canasta/add</a></td>
                                         <td class='uk-width-5-10 uk-text-justify'>
-                                            <p>Permite loguear a un usuario existente.</p>
+                                            <p>Agrega productos a la canasta para un usuario.</p>
+                                        </td>
+                                    </tr>
+									<tr>
+                                        <td class="uk-width-5-10"><a href='canasta/api-canasta-buy.html'>POST api/canasta/buy</a></td>
+                                        <td class='uk-width-5-10 uk-text-justify'>
+                                            <p>Permite realizar compra y actualizar existencias.</p>
+                                        </td>
+                                    </tr>
+									<tr>
+                                        <td class="uk-width-5-10"><a href='canasta/api-canasta-delete.html'>POST api/canasta/delete</a></td>
+                                        <td class='uk-width-5-10 uk-text-justify'>
+                                            <p>Permite eliminar todos los productos agragados a la canasta por un usuario.</p>
                                         </td>
                                     </tr>
                                 </tbody>
