@@ -12,6 +12,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="../uikit/css/uikit.gradient.min.css" />
     </head>
     <body>
+	<a href="../index.html" class="uk-icon-button uk-icon-arrow-left"></a>
         <div class="uk-grid">
             <div class="uk-width-8-10 uk-push-1-10">
                 <div class="uk-margin-top uk-margin-bottom uk-panel">
@@ -27,7 +28,7 @@ and open the template in the editor.
                                         URL del recurso
                                     </td>
                                     <td style="padding-left: 10px; border-top: 1px solid #aaa;">
-                                        <a href='http://tiendaapirest.aws.af.cm/api/productos' >http://tiendaapirest.aws.af.cm/api/productos</a>
+                                        <a href='http://tiendaapirest.aws.af.cm/api/productos/nuevoregistro' >http://tiendaapirest.aws.af.cm/api/productos/nuevoregistro</a>
                                     </td>
                                 </tr>
 
@@ -38,7 +39,20 @@ and open the template in the editor.
                                     <td style="padding-left: 10px; border-top: 1px solid #aaa;">
                                         <p>
                                             <b>Requeridos:</b> <br>
-                                            <code>Ninguno</code> <br>
+                                            <code>idcategoria=[integer]</code> <br>
+                                            <span class='uk-text-info'>Ejemplo: idcategoria = 5</span>
+                                            <br><br><code>nombre=[string]</code> <br>
+                                            <span class='uk-text-info'>Ejemplo: nombre = Brand Car</span>
+											<br><br><code>descripcion=[string]</code> <br>
+                                            <span class='uk-text-info'>Ejemplo: descripcion = 4-door, FW Engine</span>
+											<br><br><code>codigo=[integer]</code> <br>
+                                            <span class='uk-text-info'>Ejemplo: codigo = 1120</span>
+											<br><br><code>precio=[integer]</code> <br>
+                                            <span class='uk-text-info'>Ejemplo: precio = 69000000</span>
+											<br><br><code>existencias=[integer]</code> <br>
+                                            <span class='uk-text-info'>Ejemplo: existencias = 120</span>
+											<br><br><code>username=[string] (Username de administrador).</code> <br>
+                                            <span class='uk-text-info'>Ejemplo: username = someadmin</span>
                                         </p>
                                     </td>
                                 </tr>
@@ -46,150 +60,45 @@ and open the template in the editor.
 
                                 <tr style="border-bottom: 1px solid #ddd;">
                                     <td valign="top" style="font-weight: bold; font-size: 1.4em; width: 20%; border-right: 1px solid #aaa; border-top: 1px solid #aaa;">
-                                        Ejemplo de solicitud
+                                        Respuesta de &eacute;xito
                                     </td>
-                                    <td style="padding-left: 10px; border-top: 1px solid #aaa;"><pre class='uk-scrollable-text'>
-{
-    categs: [
-        {
-            id: 1,
-            nombre: "Automóviles"
-        },
-        {
-            id: 2,
-            nombre: "Computación"
-        },
-        {
-            id: 3,
-            nombre: "Electrónica"
-        },
-        {
-            id: 4,
-            nombre: "Hogar"
-        },
-        {
-            id: 5,
-            nombre: "Instrumentos Musicales"
-        },
-        {
-            id: 6,
-            nombre: "Videojuegos-Consolas"
-        }
-    ],
-    prods: [
-        {
-            id: 1,
-            catId: 3,
-            nombre: "Samsung Captivate",
-            descr: "El Samsung i897 Captivate es el equivalente del Samsung Galaxy S para el mercado norteamericano. Es un smartphone Android con una pantalla AMOLED de 4 pulgadas, Android 2.1 y cámara de 5 megapixels.",
-            codigo: 1001,
-            precio: "460000",
-            existencia: 100,
-            url: "samsung-i897-captivate.jpg"
-        },
-        {
-            id: 2,
-            catId: 3,
-            nombre: "Sony XPERIA ZL",
-            descr: "El Sony Xperia ZL es la versión más compacta del Xperia Z, sin la protección a prueba de agua. Posee una pantalla de 5 pulgadas Full HD con Mobile BRAVIA Engine 2, procesador quad-core Snapdragon S4 Pro, cámara trasera de 13 megapixels con capacidad HDR, cámara frontal situada en la parte inferior de la pantalla y una batería de 2370mAh.",
-            codigo: 1002,
-            precio: "950000",
-            existencia: 85,
-            url: "sony-xperia-zl.jpg"
-        },
-        {
-            id: 3,
-            catId: 2,
-            nombre: "HP All in One",
-            descr: "Impresora",
-            codigo: 1003,
-            precio: "230000",
-            existencia: 600,
-            url: "impresora-hp-color-laserjet-2840-all-in-one-ganga.jpg"
-        },
-        {
-            id: 4,
-            catId: 1,
-            nombre: "Ford Mustang 2008",
-            descr: "Modelo: 2008, Recorrido: 20000 km, Transmisión: Automática.",
-            codigo: 1004,
-            precio: "69800000",
-            existencia: 1,
-            url: "ford-mustang-2008.jpg"
-        },
-        {
-            id: 5,
-            catId: 1,
-            nombre: "Fiat Topolino",
-            descr: "Diseño: Custom. Modelo: 1978, Recorrido: 25000 km, Transmisión: Mecánica.",
-            codigo: 1005,
-            precio: "11000000",
-            existencia: 1,
-            url: "fiat-topolino-custom.jpg"
-        },
-        {
-            id: 6,
-            catId: 4,
-            nombre: "Juego De Muebles Para Estudio En Madera Y Cuero",
-            descr: "Escritorio en cedro tallado, superficie forrada en cuero argentino con medidas de 1.60 largo x 63 ancho x 78 altura cm. Silla de escritorio en madera tallada. Sofa en cuero capitoneado para 2 personas con medidas de 2 mt de ancho por 1 mt de profundidad. Una silla auxiliar de madera forrada en cuero con espaldar. Una mesa de centro de madera y vidrio de 1.20 x 80 cm.",
-            codigo: 1006,
-            precio: "5000000",
-            existencia: 4,
-            url: "juego-de-muebles-para-estudio-en-madera-y-cuero.jpg"
-        },
-        {
-            id: 7,
-            catId: 4,
-            nombre: "Vitrina China En Madera Antigua",
-            descr: "VITRINA CHINA EN MADERA ANTIGUA CON CALADOS EN MADERA, 4 DIVISIONES. ALTURA 2 MTS CON 10 CMS , ANCHO 1,19 CMS, PROFUNDIDAD 38 CMS.",
-            codigo: 1007,
-            precio: "8500000",
-            existencia: 1,
-            url: "vitrina-china-en-madera-antigua.jpg"
-        },
-        {
-            id: 8,
-            catId: 5,
-            nombre: "Guitarra Gibson Custom 1959 Es-335 Reissue Edicion",
-            descr: "Symmetrical double cutaway. Semi-hollow laminated maple body. Single-ply cream top and back body binding. Set one-piece mahogany 1959 rounded profile neck with long tenon. 22-fret bound rosewood fingerboard with pearloid dot inlays. Black headstock overlay with pearl logo and holly "crown" inlay. Three-per-side vintage tulip tuners. ABR-1 bridge. Stop tailpiece. Raised bound black pickguard. Two '57 Classic humbucker pickups. Four amber top hat knobs with CTS pots and bumble bee capaci",
-            codigo: 1008,
-            precio: "8000000",
-            existencia: 3,
-            url: "guitarra-gibson-custom-1959-es-335-reissue-edicion-limitada.jpg"
-        },
-        {
-            id: 9,
-            catId: 5,
-            nombre: "Ddrum Reflex Rsl + Sabian Xs20 + Ddrum Rx Hardware",
-            descr: "Negro con recubrimiento de polvo montajes de suspensión Fixtpitch Resolift bombo levanta terminales Faceoff Aros de acero de 2,3 mm juego aros de bombo conchas aliso Bombo: 18" x 22" Redoblante: 5.5" x 14" Tom Tom: 8" x 10" Tom Tom: 9" x 12" Tom Piso: 14" x 16" SABIAN XS20 SET DE PLATILLOS INCLUYE: 20" MEDIUM RIDE 18" MEDIUM THIN CRASH 16" MEDIUM THIN CRASH 14" MEDIUM HATS 10" SPLASH",
-            codigo: 1009,
-            precio: "4499000",
-            existencia: 5,
-            url: "ddrum-reflex-rsl-sabian-xs20-ddrum-rx-hardware.jpg"
-        },
-        {
-            id: 10,
-            catId: 6,
-            nombre: "Xbox 360",
-            descr: "Procesador : IBM Power PC nombre en clave Xenon ( 3 núcleos de procesamiento paralelos basados en power pc con 2 hilos de instrucción por núcleo (6 hilos en total) , a 3, 2 GHZ cada núcleo ) 1 mb de caché nivel 2. GPU : ATI "Xenos", desarrollado por ATI y Microsoft Basado en el núcleo ATI Radeon R500. Utilizar la nueva arquitectura de Shaders Unificados.500 MHz. VRAM : Integrada al GPU y basada en la tecnología eDRAM, Memoria RAM : 512 MB gddr3 a 700 MHz.",
-            codigo: 1010,
-            precio: "489900",
-            existencia: 90,
-            url: "xbox360.jpg"
-        },
-        {
-            id: 11,
-            catId: 6,
-            nombre: "PS3",
-            descr: "Per core 512KB L2 cache 7 x SPE 3.2GHz 7 x 128b 128 SIMD GPRs 7 x 256KB SRAM for SPE 1 de 8 SPEs: 218 GFLOPS GPU: Nvidia RSX 550MHz 1.8 TFLOPS floating point performance Full HD (up to 1080p) x 2 channels Multi-way programmable parallel floating point shader pipelines Sonido: Dolby 5.1ch, DTS, LPCM, etc. (Cell- base processing) Memoria: 256MB XDR Main RAM 3.2GHz 256MB GDDR3 VRAM 700MHz",
-            codigo: 1011,
-            precio: "620000",
-            existencia: 90,
-            url: "ps3.jpg"
-        }
-    ]
-}                                </pre>
-                                        <p></p>
+                                    <td style="padding-left: 10px; border-top: 1px solid #aaa;">
+                                        <i class='uk-text-success'>&lt;El registro se realiz&oacute;&gt;</i> <br>
+                                        <pre> 
+{ 
+    'result' : 'Registro exitoso' 
+} 
+                                       
+                                        </pre>
+                                    </td>
+                                </tr>
+
+                                <tr style="border-bottom: 1px solid #ddd;">
+                                    <td valign="top" style="font-weight: bold; font-size: 1.4em; width: 20%; border-right: 1px solid #aaa; border-top: 1px solid #aaa;">
+                                        Respuesta de error
+                                    </td>
+                                    <td style="padding-left: 10px; border-top: 1px solid #aaa;">
+                                        <i class='uk-text-danger'>&lt;Datos no enviados&gt;</i> <br>
+                                        <pre> 
+{ 
+    'result' : 'ERROR DATOS' 
+} 
+                                       
+                                        </pre>
+                                        <br><i class='uk-text-danger'>&lt;El registro ya existe&gt;</i> <br>
+                                        <pre> 
+{ 
+    'result' : 'ERROR REGISTRO EXISTE' 
+} 
+                                       
+                                        </pre>
+										<br><i class='uk-text-danger'>&lt;Administrador no logueado&gt;</i> <br>
+                                        <pre> 
+{ 
+    'result' : 'UNAUTHORIZED' 
+} 
+                                       
+                                        </pre>
                                     </td>
                                 </tr>
                             </tbody>

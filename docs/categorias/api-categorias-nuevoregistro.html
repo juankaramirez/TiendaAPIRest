@@ -12,12 +12,13 @@ and open the template in the editor.
         <link rel="stylesheet" href="../uikit/css/uikit.gradient.min.css" />
     </head>
     <body>
+	<a href="../index.html" class="uk-icon-button uk-icon-arrow-left"></a>
         <div class="uk-grid">
             <div class="uk-width-8-10 uk-push-1-10">
                 <div class="uk-margin-top uk-margin-bottom uk-panel">
                     <article class="uk-article">
                         <h1 class="uk-article-title">POST api/categorias/nuevoregistro</h1>
-                        <p class="uk-article-meta">Permite registrar una nueva categor&iacute;a.</p>
+                        <p class="uk-article-meta">Permite registrar una nueva categor&iacute;a. Requiere autenticaci&oacute;n de administrador.</p>
                         <p class="uk-article-lead"></p>
                         <table class="uk-table">
                             <tbody style='border-left: 1px solid #aaa; border-right: 1px solid #aaa;'>
@@ -40,6 +41,8 @@ and open the template in the editor.
                                             <b>Requeridos:</b> <br>
                                             <code>nomCat=[string]</code> <br>
                                             <span class='uk-text-info'>Ejemplo: nomCat = Animales</span>
+											<br><br><code>username=[string] (Username de administrador).</code> <br>
+                                            <span class='uk-text-info'>Ejemplo: username = someadmin</span>
                                         </p>
                                     </td>
                                 </tr>
@@ -75,6 +78,13 @@ and open the template in the editor.
                                         <pre> 
 { 
     'result' : 'ERROR REGISTRO EXISTE' 
+} 
+                                       
+                                        </pre>
+										<br><i class='uk-text-danger'>&lt;Administrador no logueado&gt;</i> <br>
+                                        <pre> 
+{ 
+    'result' : 'UNAUTHORIZED' 
 } 
                                        
                                         </pre>
