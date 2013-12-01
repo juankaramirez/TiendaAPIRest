@@ -1,7 +1,5 @@
 <?php
 
-header('Access-Control-Allow-Origin: *');
-
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Model\categoria;
@@ -13,21 +11,13 @@ $application = \Stormpath\Resource\Application::get($href);
 
 $app = new Silex\Application();
 
-$app->register(new Silex\Provider\SessionServiceProvider());
-
-
 $app->before(function ($request) {
-            $request->getSession()->start();
-        });
-
-
+	header('Access-Control-Allow-Origin: *');
+	});
 
 $services_json = json_decode(getenv("VCAP_SERVICES"), true);
 $mysql_config = $services_json["mysql-5.1"][0]["credentials"];
 
-/**
- * Conexión con la base de datos
- */
 $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     'db.options' => array(
         'driver' => 'pdo_mysql',
@@ -40,6 +30,13 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     ),
 ));
 
+$app->get('/', function () use($app) {
+			
+            return $app->json(array(
+                        'result' => 'Bienvenido! Visita http://docs-tiendaapirest.aws.af.cm para empezar a usar la api'
+            ));
+        });
+
 $app->get('api/categorias', function () use($app) {
 
             $categs = $GLOBALS['em']->getRepository('Model\categoria')->findAll();
@@ -48,7 +45,7 @@ $app->get('api/categorias', function () use($app) {
             ));
         });
 
-$app->post('api/categorias/nuevoregistro', function (Request $request) use($app) {
+$app->post('api/categorias', function (Request $request) use($app) {
             $href = 'https://api.stormpath.com/v1/directories/UkDL1AAl4Qcw3p0XcjLlU';
             $directory = \Stormpath\Resource\Directory::get($href);
 
@@ -85,7 +82,7 @@ $app->post('api/categorias/nuevoregistro', function (Request $request) use($app)
             }
         });
 
-$app->put('api/categorias/edicion', function (Request $request) use($app) {
+$app->put('api/categorias', function (Request $request) use($app) {
             $href = 'https://api.stormpath.com/v1/directories/UkDL1AAl4Qcw3p0XcjLlU';
             $directory = \Stormpath\Resource\Directory::get($href);
 
@@ -123,7 +120,7 @@ $app->put('api/categorias/edicion', function (Request $request) use($app) {
             }
         });
 
-$app->delete('api/categorias/eliminar', function (Request $request) use($app) {
+$app->delete('api/categorias', function (Request $request) use($app) {
             $href = 'https://api.stormpath.com/v1/directories/UkDL1AAl4Qcw3p0XcjLlU';
             $directory = \Stormpath\Resource\Directory::get($href);
 
@@ -188,7 +185,7 @@ $app->get('api/productos', function () use($app) {
         });
 
 
-$app->post('api/productos/nuevoregistro', function (Request $request) use($app) {
+$app->post('api/productos', function (Request $request) use($app) {
             $href = 'https://api.stormpath.com/v1/directories/UkDL1AAl4Qcw3p0XcjLlU';
             $directory = \Stormpath\Resource\Directory::get($href);
 
@@ -233,7 +230,7 @@ $app->post('api/productos/nuevoregistro', function (Request $request) use($app) 
             }
         });
 
-$app->put('api/productos/edicion', function (Request $request) use($app) {
+$app->put('api/productos', function (Request $request) use($app) {
             $href = 'https://api.stormpath.com/v1/directories/UkDL1AAl4Qcw3p0XcjLlU';
             $directory = \Stormpath\Resource\Directory::get($href);
 
@@ -284,7 +281,7 @@ $app->put('api/productos/edicion', function (Request $request) use($app) {
             }
         });
 
-$app->delete('api/productos/eliminar', function (Request $request) use($app) {
+$app->delete('api/productos', function (Request $request) use($app) {
             $href = 'https://api.stormpath.com/v1/directories/UkDL1AAl4Qcw3p0XcjLlU';
             $directory = \Stormpath\Resource\Directory::get($href);
 
@@ -440,7 +437,7 @@ $app->post('api/signup', function(Request $request) use($app) {
         });
 
 
-$app->post('api/canasta', function(Request $request) use ($app) {
+$app->get('api/canasta', function(Request $request) use ($app) {
             $productos = array();
             $href = 'https://api.stormpath.com/v1/directories/41s3NhQLcURkZOZNIV2h0J';
             $directory = \Stormpath\Resource\Directory::get($href);
@@ -476,7 +473,7 @@ $app->post('api/canasta', function(Request $request) use ($app) {
         });
 
 
-$app->post('api/canasta/add', function (Request $request) use($app) {
+$app->post('api/canasta', function (Request $request) use($app) {
             $href = 'https://api.stormpath.com/v1/directories/41s3NhQLcURkZOZNIV2h0J';
             $directory = \Stormpath\Resource\Directory::get($href);
 
@@ -509,7 +506,7 @@ $app->post('api/canasta/add', function (Request $request) use($app) {
             ));
         });
 
-$app->post('api/canasta/buy', function (Request $request) use($app) {
+$app->put('api/canasta', function (Request $request) use($app) {
             $href = 'https://api.stormpath.com/v1/directories/41s3NhQLcURkZOZNIV2h0J';
             $directory = \Stormpath\Resource\Directory::get($href);
 
@@ -541,7 +538,7 @@ $app->post('api/canasta/buy', function (Request $request) use($app) {
             ));
         });
 
-$app->delete('api/canasta/delete', function (Request $request) use($app) {
+$app->delete('api/canasta', function (Request $request) use($app) {
             $href = 'https://api.stormpath.com/v1/directories/41s3NhQLcURkZOZNIV2h0J';
             $directory = \Stormpath\Resource\Directory::get($href);
 
