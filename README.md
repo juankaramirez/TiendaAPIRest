@@ -7,4 +7,4 @@ Consumer: clienteTiendaAPIrest.
 Client site: http://clientetiendaapirest.aws.af.cm/
 Api link: http://tiendaapirest.aws.af.cm/ (For documentation of the API, visit "Docs" folder in the root of this repository).
 
-Powered by Silex Framework.
+Powered by Silex Framework: http://silex.sensiolabs.org/
