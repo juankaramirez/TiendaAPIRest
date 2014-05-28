@@ -1,7 +1,7 @@
 TiendaAPIRest
 =============
 
-RESTful Web Service API. Basic online store developed to see how a RESTful API works, being consumed by a client.
+RESTful Web Service API. Basic online store developed to see how a RESTful API works, being consumed by a client. First time using Silex Framework.
 
 - Consumer: clienteTiendaAPIrest.
 
